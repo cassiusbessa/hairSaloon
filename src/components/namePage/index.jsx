@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import nameSaloon from '../../images/sulaTopHair/profile.png';
+import nameSaloon from '../../images/sulaTopHair/profile_new.png';
 
 function NamePage() {
 	return (

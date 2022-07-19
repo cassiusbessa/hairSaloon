@@ -1,17 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Playfair+Display:ital@1&display=swap');
 
 .name {
+	align-items: center;
 	background-color: rgba(17,17,17);
+	color: #C5545E;
 	display: flex;
 	flex-direction: column;
-	width: 100%;
-	height: 85px;
-	align-items: center;
-	justify-content: center;
-	color: #C5545E;
 	font-family: 'Cormorant Garamond', serif;
+	font-size: 1rem;
+	height: 80px;
+	justify-content: center;
+	width: 100%;
+
 	#logoName {
-		height: 370px;
-		width: 100%;
+		height: 85%;
+		max-width: 660px;
+		width: 95%;
+	}
+}
+
+@media screen and (min-width: 770px) {
+	.name {
+		font-size: 1.2rem;
+		height: 110px;
 	}
 }
