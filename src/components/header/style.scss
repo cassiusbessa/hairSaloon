@@ -8,13 +8,13 @@ header {
 @media(max-width: 800px) {
 	header {
 		width: 100%;
-		height: 40vh;
 		font-size: 87.5%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		text-align: justify;
+		padding-bottom: 30px;
 		img {
 			height: 180px;
 		}
@@ -29,17 +29,17 @@ header {
 			text-align: justify;
 			vertical-align: baseline;
 		}
-		  #numero {
-				font-family: 	'Times New Roman', Times, serif;
-			}
-			p {
-				font-size: 1.1rem;
-			}
-			#zap, #local {
-				color: #C5545E;
-				font-size: 1.8rem;
-				margin-right: 2px;
-			}
+		#numero {
+			font-family: 	'Times New Roman', Times, serif;
+		}
+		p {
+			font-size: 1.1rem;
+		}
+		#zap, #local {
+			color: #C5545E;
+			font-size: 1.8rem;
+			margin-right: 2px;
+		}
 	}
 
 }

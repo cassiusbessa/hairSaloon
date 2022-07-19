@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './style.scss';
+import './style.scss';
 import nameSaloon from '../../images/sulaTopHair/profile.png';
 
 function NamePage() {
