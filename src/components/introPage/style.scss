@@ -1,7 +1,6 @@
 $bgImg: url('../../images/sulaTopHair/ruivaHair.jpg');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital@1&display=swap');
 #introPage {
-	@media(max-width: 800px) {
 	background-image: url('../../images/sulaTopHair/ruivaHair.jpg');
 	background-size: cover;
 	background-position: left center;
@@ -72,6 +71,5 @@ $bgImg: url('../../images/sulaTopHair/ruivaHair.jpg');
 		background-image: -o-linear-gradient(top, #2b2929 0%, #383636 100%);
 		background-image: linear-gradient(top, #2b2929 0%, #383636 100%);
 		padding: 13px 30px 11px 30px;
-	}
 	}
 }
