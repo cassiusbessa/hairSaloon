@@ -1,0 +1,33 @@
+1- Eu colocaria todas as imagens em .png como padrão pro projeto
+
+2- Dentro da pasta images, coloca a pasta components e pages também pras imagens serem separadas pelo local que elas estão sendo usadas
+
+3- O nome das pastas dentro do src/components está meio complicado, bom revisar
+
+4- colocar o nome das pastas dentro do src com a primeira letra maiuscula :)
+
+5- No header a só deveria ter a logomarca no canto esquerda bem pequeno seguido do nome 'sula top hair', esse header vai ter 10vh da altura da tela do usuário mobile.
+
+6- Ainda no header, aquelas frase de "atendimento a domicilio", "contato" terão que descer pro meio da página em um componente específico pro usuário entrar em contato
+
+====================================== modelo do site ======================================
+- header
+
+- imagem principal do site ( melhor produto por exemplo )
+
+- box de contato e informações ( 'whatsapp', 'aceitamos pix', 'atendemos do conforto de sua casa ')
+
+- imagem de marketing ( vários tipos de cabelos, pode ser aquele carrousel )
+
+- box de mensagem para com o cliente ( "nós trabalhamos para melhor lhe atender e blablabla, com background relacionado a beleza" )
+
+- box de captura de cliente ( agende seu horário )
+
+- espaço reservado a marketing final ( exemplo: foto com mensagem bem simples )
+
+- opcional: formas de pagamento
+
+- box de redes sociais e logomarca
+
+- rodápe
+===========================================================================================

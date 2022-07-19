@@ -1,10 +1,9 @@
 import React from 'react';
-import './style.scss'
-
+import './style.scss';
 
 function IntroPage() {
 	return (
-		<div id='introPage'>
+		<div className='myboxbutton' id='introPage'>
 			<button className='shiny-button'>
 				Agende o seu horário
 			</button>

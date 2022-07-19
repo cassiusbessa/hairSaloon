@@ -6,13 +6,13 @@ import Carrousel from '../components/carroussel';
 import Footer from './../components/footer';
 function Home() {
 	return (
-		<div>
+		<>
 			<Header />
 			<NamePage />
 			<IntroPage />
 			<Carrousel />
 			<Footer />
-		</div>
+		</>
 	);
 }
 

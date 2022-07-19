@@ -3,7 +3,7 @@ import './style.scss'
 import logo from '../../images/sulaTopHair/logo.png'
 import {IoLocationSharp, IoLogoWhatsapp} from 'react-icons/io5';
 
-function Header() {
+export default function Header() {
 	return (
 		<header>
 			<img src={logo} alt= 'Logo da Sula' />
@@ -22,5 +22,3 @@ function Header() {
 		</header>
 	);
 }
-
-export default Header;
