@@ -1,13 +1,12 @@
 import React from "react";
-import style from './style.scss'
+import './style.scss'
 import logo from '../../images/sulaTopHair/logo.png'
 import {IoLocationSharp, IoLogoWhatsapp} from 'react-icons/io5';
 
 function Header() {
-	console.log('oi,bb')
 	return (
 		<header>
-			<img src={logo} alt= 'Logo da Sula' />			
+			<img src={logo} alt= 'Logo da Sula' />
 			<div id="info">
 				<h4 id="numero">
 					<IoLogoWhatsapp id="zap"/>
