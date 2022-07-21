@@ -3,11 +3,11 @@ import './style.scss';
 import nameSaloon from '../../images/sulaTopHair/profile_new.png';
 
 function NamePage() {
-	return (
-		<div className='name'>
-			<img id='logoName' src={nameSaloon} alt= 'nome do salão' />
-		</div>
-	);
+  return (
+    <div className='name'>
+      <img id='logoName' src={nameSaloon} alt= 'nome do salão' />
+    </div>
+  );
 }
 
 export default NamePage;

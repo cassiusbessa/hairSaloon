@@ -1,91 +1,91 @@
 $bgImg: url('../../images/sulaTopHair/ruivaHair.jpg');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital@1&display=swap');
 #introPage {
-	align-items: center;
-	background-image: url('../../images/sulaTopHair/ruivaHair.jpg');
-	background-position: left center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	display: flex;
-	height: 342px;
-	justify-content: center;
-	overflow: hidden;
-	.shiny-button {
-		text-align: center;
-		border-width: 1px;
-		border-style: solid;
-		text-transform: uppercase;
-		text-decoration: none;
-		line-height: 1.1;
-		font-weight: normal;
-		font-family: sans-serif;
-		color: #FFFFFF;
-		font-size: 14px;
-		font-weight: 600;
-		background-color: #383636;
-		background-image: -webkit-linear-gradient(top, #fd626f 0%, #d84e59 48%, #be4751 49%, #7a272e 82%, #662125 100%);
-		background-image: -moz-linear-gradient(top, #fd626f 0%, #d84e59 48%, #be4751 49%, #7a272e 82%, #662125 100%);
-		background-image: -o-linear-gradient(top, #fd626f 0%, #d84e59 48%, #be4751 49%, #7a272e 82%, #662125 100%);
-		background-image: linear-gradient(top, #fd626f 0%, #d84e59 48%, #be4751 49%, #7a272e 82%, #662125 100%);
-		border-color: hsl(0, 0%, 22%);
-		-webkit-box-shadow: inset 0 0 1px 1px #696666, 0 0 1px 3px rgba(0, 0, 0, 0.15);
-		-moz-box-shadow: inset 0 0 1px 1px #696666, 0 0 1px 3px rgba(0, 0, 0, 0.15);
-		box-shadow: inset 0 0 1px 1px #696666, 0 0 1px 3px rgba(0, 0, 0, 0.15);
-		-webkit-text-shadow: 1px 1px 1px #040404;
-		-moz-text-shadow: 1px 1px 1px #040404;
-		-o-text-shadow: 1px 1px 1px #040404;
-		text-shadow: 1px 1px 1px #040404;
-		-webkit-border-radius: 25px;
-		-moz-border-radius: 25px;
-		border-radius: 25px;
-		padding: 12px 12px;
-		transition: transform 0.01s ease-in-out;
-	}
-	
-	.shiny-button strong {
-		letter-spacing: 1px;
-		font-size: 22px;
-	}
-	
-	.shiny-button:hover {
-		color: #FFFFFF;
-		background-color: #403d3d;
-		background-image: -webkit-linear-gradient(top, #eeadad 0%, #ac5a60 20%, #9b4f54 21%, #7a272e 82%, #662125 100%);
-		background-image: -moz-linear-gradient(top, #eeadad 0%, #ac5a60 20%, #9b4f54 21%, #7a272e 82%, #662125 100%);
-		background-image: -o-linear-gradient(top, #eeadad 0%, #ac5a60 20%, #9b4f54 21%, #7a272e 82%, #662125 100%);
-		background-image: linear-gradient(top, #eeadad 0%, #ac5a60 20%, #9b4f54 21%, #7a272e 82%, #662125 100%);
-		border-color: hsl(0, 0%, 25%);
-		-webkit-box-shadow: inset 0 0 1px 1px #6f6a6a, 0 0 1px 3px rgba(0, 0, 0, 0.15);
-		-moz-box-shadow: inset 0 0 1px 1px #6f6a6a, 0 0 1px 3px rgba(0, 0, 0, 0.15);
-		box-shadow: inset 0 0 1px 1px #6f6a6a, 0 0 1px 3px rgba(0, 0, 0, 0.15);
-		-webkit-text-shadow: 1px 1px 1px #0c0b0b;
-		-moz-text-shadow: 1px 1px 1px #0c0b0b;
-		-o-text-shadow: 1px 1px 1px #0c0b0b;
-		text-shadow: 1px 1px 1px #0c0b0b;
-	}
-	
-	.shiny-button:active {
-		color: #FFFFFF;
-		background-color: #302e2e;
-		background-image: -webkit-linear-gradient(top, #2b2929 0%, #383636 100%);
-		background-image: -moz-linear-gradient(top, #2b2929 0%, #383636 100%);
-		background-image: -o-linear-gradient(top, #2b2929 0%, #383636 100%);
-		background-image: linear-gradient(top, #2b2929 0%, #383636 100%);
-		transform: scale(1.05);
-	}
+  align-items: center;
+  background-image: url('../../images/sulaTopHair/ruivaHair.jpg');
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 342px;
+  justify-content: center;
+  overflow: hidden;
+  .shiny-button {
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 1.1;
+    font-weight: normal;
+    font-family: sans-serif;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #383636;
+    background-image: -webkit-linear-gradient(top, #fd626f 0%, #d84e59 48%, #be4751 49%, #7a272e 82%, #662125 100%);
+    background-image: -moz-linear-gradient(top, #fd626f 0%, #d84e59 48%, #be4751 49%, #7a272e 82%, #662125 100%);
+    background-image: -o-linear-gradient(top, #fd626f 0%, #d84e59 48%, #be4751 49%, #7a272e 82%, #662125 100%);
+    background-image: linear-gradient(top, #fd626f 0%, #d84e59 48%, #be4751 49%, #7a272e 82%, #662125 100%);
+    border-color: hsl(0, 0%, 22%);
+    -webkit-box-shadow: inset 0 0 1px 1px #696666, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: inset 0 0 1px 1px #696666, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 0 1px 1px #696666, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+    -webkit-text-shadow: 1px 1px 1px #040404;
+    -moz-text-shadow: 1px 1px 1px #040404;
+    -o-text-shadow: 1px 1px 1px #040404;
+    text-shadow: 1px 1px 1px #040404;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    padding: 12px 12px;
+    transition: transform 0.01s ease-in-out;
+  }
+    
+  .shiny-button strong {
+    letter-spacing: 1px;
+    font-size: 22px;
+  }
+    
+  .shiny-button:hover {
+    color: #FFFFFF;
+    background-color: #403d3d;
+    background-image: -webkit-linear-gradient(top, #eeadad 0%, #ac5a60 20%, #9b4f54 21%, #7a272e 82%, #662125 100%);
+    background-image: -moz-linear-gradient(top, #eeadad 0%, #ac5a60 20%, #9b4f54 21%, #7a272e 82%, #662125 100%);
+    background-image: -o-linear-gradient(top, #eeadad 0%, #ac5a60 20%, #9b4f54 21%, #7a272e 82%, #662125 100%);
+    background-image: linear-gradient(top, #eeadad 0%, #ac5a60 20%, #9b4f54 21%, #7a272e 82%, #662125 100%);
+    border-color: hsl(0, 0%, 25%);
+    -webkit-box-shadow: inset 0 0 1px 1px #6f6a6a, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: inset 0 0 1px 1px #6f6a6a, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 0 1px 1px #6f6a6a, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+    -webkit-text-shadow: 1px 1px 1px #0c0b0b;
+    -moz-text-shadow: 1px 1px 1px #0c0b0b;
+    -o-text-shadow: 1px 1px 1px #0c0b0b;
+    text-shadow: 1px 1px 1px #0c0b0b;
+  }
+    
+  .shiny-button:active {
+    color: #FFFFFF;
+    background-color: #302e2e;
+    background-image: -webkit-linear-gradient(top, #2b2929 0%, #383636 100%);
+    background-image: -moz-linear-gradient(top, #2b2929 0%, #383636 100%);
+    background-image: -o-linear-gradient(top, #2b2929 0%, #383636 100%);
+    background-image: linear-gradient(top, #2b2929 0%, #383636 100%);
+    transform: scale(1.05);
+  }
 }
 
 @media screen and (min-width: 770px) {
-	#introPage {
-		background-position: left;
-		height: 680px;
-		.shiny-button {
-			padding: 16px 30px;
-			transition: transform 0.3s ease-in-out;
-		}
+  #introPage {
+    background-position: left;
+    height: 680px;
+    .shiny-button {
+      padding: 16px 30px;
+      transition: transform 0.3s ease-in-out;
+    }
 
-		.shiny-button:hover {
-			transform: scale(1.1);
-		}
-	}
+    .shiny-button:hover {
+      transform: scale(1.1);
+    }
+  }
 }
