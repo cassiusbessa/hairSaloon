@@ -1,11 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Playfair+Display:ital@1&display=swap');
 
-.carousel-img { 
-  height: 100vh;
-  max-height: 500px;
+.carousel {
+  background-color: rgb(75, 75, 75);
 
-  img {
-    height: 100%;
-    object-fit: cover;
+  .carousel-content {
+    height: 450px;
+    width: 100%;
+
+    img {
+      height: 450px;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .carousel {
+    
+    .carousel-content {
+      height: 600px;
+  
+      img {
+        height: 600px;
+      }
+    }
   }
 }
