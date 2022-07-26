@@ -17,7 +17,6 @@ function MyVerticallyCenteredModal (props) {
         {props.children}
       </Modal.Body>
       <Modal.Footer>
-        <button onClick={props.onHide} className='default-page-button'>Close</button>
         {props.additionalCustonButton}
       </Modal.Footer>
     </Modal>

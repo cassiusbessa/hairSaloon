@@ -20,17 +20,22 @@ function IntroPage() {
         title='Agendamento'
         additionalCustonButton= {
           <button variant="primary" type="submit" className='default-page-button'>
-            Submit
+            Agendar
           </button>
         }
       >
         <Form>
           <Form.Group>
-            <Form.Label>Email:</Form.Label>
-            <Form.Control type="email" placeholder="Digite seu email" />
-            <Form.Text className="text-muted">
-              Nós nunca enviaremos seu email para ninguém.
-            </Form.Text>
+            <Form.Label>Nome:</Form.Label>
+            <Form.Control type="text" placeholder="Digite seu email" />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Telefone:</Form.Label>
+            <Form.Control type="text" placeholder="Digite seu email" />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Endereço:</Form.Label>
+            <Form.Control type="email" placeholder="Bairro" />
           </Form.Group>
         </Form>
       </MyVerticallyCenteredModal>
