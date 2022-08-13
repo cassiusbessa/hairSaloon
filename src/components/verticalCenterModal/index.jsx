@@ -17,7 +17,7 @@ function MyVerticallyCenteredModal (props) {
         {props.children}
       </Modal.Body>
       <Modal.Footer>
-        {props.additionalCustonButton}
+        {props.additionalcustonbutton}
       </Modal.Footer>
     </Modal>
   );
