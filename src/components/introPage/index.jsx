@@ -58,8 +58,8 @@ function IntroPage() {
   const generateForm = () => {
     const { preço, data, serviçoId, ...newForm } = form;
     const fields = Object.keys(newForm);
-    return fields.map((field ) => (
-      <Form.Group>
+    return fields.map((field, i) => (
+      <Form.Group key={i}>
         <Form.Label>{`${field[0].toUpperCase()}${field.slice(1)}:`}</Form.Label>
         <Form.Control
           name={field}
@@ -71,10 +71,10 @@ function IntroPage() {
     ))
   }
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log('teste');
-  // }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('teste');
+  }
 
   return (
     <div id ='introPage'>

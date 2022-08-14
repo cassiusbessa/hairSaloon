@@ -9,8 +9,6 @@ const genericRequest = async (path) => {
   return result;
 };
 
-genericRequest('servicos').then((e) => console.log(e));
-
 export {
   genericRequest,
 };
