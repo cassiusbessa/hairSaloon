@@ -1,18 +1,20 @@
 import React from 'react';
-import Header from '../components/header';
-import IntroPage from '../components/introPage';
-import NamePage from '../components/namePage';
-import Carrousel from '../components/carroussel';
-import Footer from './../components/footer';
+import Header from '../components/Header';
+import IntroPage from '../components/IntroPage';
+import NamePage from '../components/NamePage';
+import Carrousel from '../components/Carroussel';
+import Footer from '../components/Footer';
+import Calender from '../components/Calender';
 
 function Home() {
   return (
     <div>
-      <Header />
+      {/* <Header />
       <NamePage />
       <IntroPage />
       <Carrousel />
-      <Footer />
+      <Footer /> */}
+      <Calender />
     </div>
   );
 }

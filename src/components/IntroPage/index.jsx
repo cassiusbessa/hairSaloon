@@ -3,7 +3,7 @@ import './style.scss'
 import Form from 'react-bootstrap/Form';
 import { genericRequest } from '../../api/client-api';
 
-import MyVerticallyCenteredModal from '../verticalCenterModal';
+import MyVerticallyCenteredModal from '../VerticalCenterModal';
 
 // const formObj = {
 //   logradouro: {
