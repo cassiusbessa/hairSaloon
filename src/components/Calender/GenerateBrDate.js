@@ -84,7 +84,7 @@ export default class BrDate {
     return arrOfDates;
   }
 
-  arrByMonth(month, year) { // month: number, year: number - Os meses começam de 0 em diante
+  arrByMonth(month = new Date().getMonth(), year = new Date().getFullYear()) { // month: number, year: number - Os meses começam de 0 em diante
     let startMonthDay = new Date(year, month, 1);
     const firstWeekDayOfMonth = startMonthDay.getDay();
     startMonthDay = this.sumDates(startMonthDay, 'Date', - firstWeekDayOfMonth);
@@ -103,4 +103,4 @@ const brDate = new BrDate();
 // const arr = brDate.arrDayInterval('2022/08/01', '2022/08/31');
 // console.log(brDate.timeFormate());
 // console.log(brDate.dateFormate());
-console.log(brDate.arrByMonth(7, 2022));
+console.log(brDate.arrByMonth());
