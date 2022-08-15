@@ -71,7 +71,7 @@ export default class BrDate {
     return this.dateFormate(dt);
   }
 
-  arrDayInterval(initialDate, endDate) { // Deve ser passado no formato EUA (YYYY/MM/DD)
+  arrDayInterval(initialDate, endDate) { // initialDate e endDate devem ser passado no formato dos EUA (YYYY/MM/DD)
     const end = new Date(endDate);
     let dt = new Date(initialDate);
     dt.setDate(dt.getDate() - 1);
@@ -83,10 +83,24 @@ export default class BrDate {
     }
     return arrOfDates;
   }
+
+  arrByMonth(month, year) { // month: number, year: number - Os meses começam de 0 em diante
+    let startMonthDay = new Date(year, month, 1);
+    const firstWeekDayOfMonth = startMonthDay.getDay();
+    startMonthDay = this.sumDates(startMonthDay, 'Date', - firstWeekDayOfMonth);
+    let arrMonth = [];
+    while(arrMonth.length < 42) {
+      const dt = this.helperVariables(startMonthDay);
+      const objDate = { weekDay: dt.weekDay, day: dt.day, month: dt.month, fullYear: dt.fullYear };
+      arrMonth.push(objDate);
+      startMonthDay.setDate(startMonthDay.getDate() + 1);
+    }
+    return arrMonth;
+  }
 }
 
-// const brDate = new BrDate();
+const brDate = new BrDate();
 // const arr = brDate.arrDayInterval('2022/08/01', '2022/08/31');
 // console.log(brDate.timeFormate());
 // console.log(brDate.dateFormate());
-// console.log(arr);
+console.log(brDate.arrByMonth(7, 2022));
