@@ -1,5 +1,5 @@
-// import months from '../../helpers/months';
-// import weekDays from '../../helpers/weekDays';
+// const months = require('../../helpers/months');
+// const weekDays = require('../../helpers/weekDays');
 
 const months = [
   'Janeiro',
@@ -27,8 +27,15 @@ const weekDays = [
 ];
 
 export default class BrDate {
-  months = months;
-  weekDays = weekDays;
+  #months = [];
+  #weekDays = [];
+  calendar = [];
+
+  constructor(nameMonths, nameWeekDays, month, year) {
+    this.#months = nameMonths;
+    this.#weekDays = nameWeekDays;
+    this.arrByMonth(month, year);
+  }
 
   // HELPERS ===============================================>
   helperVariables(date) { // Recebe uma data e retorna um objeto com as informações separadas
@@ -44,7 +51,7 @@ export default class BrDate {
       fullDate: ndt,
     }
   }
-  
+
   sumDates(date, dateMetod, num) { // date: Date, dateMetod: 'Day' | 'Date' | 'Month' | 'FullYear' | 'Hours' | 'Minutes'
     const ndt = date;
     ndt.setDate(date[`get${dateMetod}`]() + num);
@@ -66,11 +73,6 @@ export default class BrDate {
     );
   }
 
-  currentDate() { // Retorna a data no momento atual
-    const dt = new Date();
-    return this.dateFormate(dt);
-  }
-
   arrDayInterval(initialDate, endDate) { // initialDate e endDate devem ser passado no formato dos EUA (YYYY/MM/DD)
     const end = new Date(endDate);
     let dt = new Date(initialDate);
@@ -86,21 +88,41 @@ export default class BrDate {
 
   arrByMonth(month = new Date().getMonth(), year = new Date().getFullYear()) { // month: number, year: number - Os meses começam de 0 em diante
     let startMonthDay = new Date(year, month, 1);
-    const firstWeekDayOfMonth = startMonthDay.getDay();
-    startMonthDay = this.sumDates(startMonthDay, 'Date', - firstWeekDayOfMonth);
-    let arrMonth = [];
-    while(arrMonth.length < 42) {
+    const firstWeekDayOfMonth = startMonthDay.getDate();
+    const firstWeekDayOfCalendar = firstWeekDayOfMonth === 1 ? - 7 : - firstWeekDayOfMonth;
+    startMonthDay = this.sumDates(startMonthDay, 'Date', firstWeekDayOfCalendar);
+    let calendar = [];
+    while(calendar.length < 42) {
       const dt = this.helperVariables(startMonthDay);
       const objDate = { weekDay: dt.weekDay, day: dt.day, month: dt.month, fullYear: dt.fullYear };
-      arrMonth.push(objDate);
+      calendar.push(objDate);
       startMonthDay.setDate(startMonthDay.getDate() + 1);
     }
-    return arrMonth;
+    this.calendar = calendar;
+    return calendar;
+  }
+
+  nextMonth() {
+    const dayOneObj = this.calendar.find(({ day }) => day === 1);
+    if (dayOneObj.month === 11) {
+      dayOneObj.month = 0;
+      dayOneObj.fullYear += 1;
+    } else {
+      dayOneObj.month += 1;
+    }
+    this.calendar = this.arrByMonth(dayOneObj.month, dayOneObj.fullYear);
+    return this.calendar;
+  }
+
+  previousMonth() {
+    const dayOneObj = this.calendar.find(({ day }) => day === 1);
+    if (dayOneObj.month === 0) {
+      dayOneObj.month = 11;
+      dayOneObj.fullYear -= 1;
+    } else {
+      dayOneObj.month -= 1;
+    }
+    this.calendar = this.arrByMonth(dayOneObj.month, dayOneObj.fullYear);
+    return this.calendar;
   }
 }
-
-const brDate = new BrDate();
-// const arr = brDate.arrDayInterval('2022/08/01', '2022/08/31');
-// console.log(brDate.timeFormate());
-// console.log(brDate.dateFormate());
-console.log(brDate.arrByMonth());

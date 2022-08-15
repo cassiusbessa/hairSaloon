@@ -8,6 +8,4 @@ const weekDays = [
   'Sábado'
 ];
 
-module.exports = {
-  months,
-}
+module.exports = weekDays;

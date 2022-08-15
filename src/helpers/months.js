@@ -13,6 +13,4 @@ const months = [
   'Dezembro'
 ];
 
-module.exports = {
-  months,
-}
+module.exports = months;
