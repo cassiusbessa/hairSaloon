@@ -1,11 +1,11 @@
 const weekDays = [
-  'Domingo',
-  'Segunda-Feira',
-  'Terça-Feira',
-  'Quarta-Feira',
-  'Quinta-Feira',
-  'Sexta-Feira',
-  'Sábado'
+  'domingo',
+  'segunda-feira',
+  'terça-feira',
+  'quarta-feira',
+  'quinta-feira',
+  'sexta-feira',
+  'sábado'
 ];
 
-module.exports = weekDays;
+export default weekDays;

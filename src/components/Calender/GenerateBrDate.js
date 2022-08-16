@@ -1,32 +1,4 @@
-// const months = require('../../helpers/months');
-// const weekDays = require('../../helpers/weekDays');
-
-const months = [
-  'Janeiro',
-  'Fevereiro',
-  'Março',
-  'Abril',
-  'Maio',
-  'Junho',
-  'Julho',
-  'Agosto',
-  'Setembro',
-  'Outubro',
-  'Novembro',
-  'Dezembro'
-];
-
-const weekDays = [
-  'Domingo',
-  'Segunda-Feira',
-  'Terça-Feira',
-  'Quarta-Feira',
-  'Quinta-Feira',
-  'Sexta-Feira',
-  'Sábado'
-];
-
-export default class BrDate {
+class BrDate {
   #months = [];
   #weekDays = [];
   calendar = [];
@@ -59,17 +31,10 @@ export default class BrDate {
   }
 
   // Methods ===============================================>
-  dateFormate(date = new Date()) { // Retorn a data (SD, DD/MM/AAAA) no formato brasileiro
+  dateFormate(date = new Date()) { // Retorna a data (DD/MM/AAAA) no formato brasileiro da data passada
     const ndt = this.helperVariables(date);
     return (
-      `${this.weekDays[ndt.weekDay]}, ${ndt.day} de ${this.months[ndt.month]} de ${ndt.fullYear}`
-    );
-  }
-
-  timeFormate(date = new Date()) { // Retorn a hora (HH:MM:SS)
-    const ndt = this.helperVariables(date);
-    return (
-      `${ndt.hours}:${ndt.minutes}:${ndt.seconds}`
+      `${this.#weekDays[ndt.weekDay]}, ${ndt.day} de ${this.#months[ndt.month]}`
     );
   }
 
@@ -88,8 +53,8 @@ export default class BrDate {
 
   arrByMonth(month = new Date().getMonth(), year = new Date().getFullYear()) { // month: number, year: number - Os meses começam de 0 em diante
     let startMonthDay = new Date(year, month, 1);
-    const firstWeekDayOfMonth = startMonthDay.getDate();
-    const firstWeekDayOfCalendar = firstWeekDayOfMonth === 1 ? - 7 : - firstWeekDayOfMonth;
+    const firstWeekDay = startMonthDay.getDay();
+    const firstWeekDayOfCalendar = firstWeekDay === 0 ? - 7 : - firstWeekDay;
     startMonthDay = this.sumDates(startMonthDay, 'Date', firstWeekDayOfCalendar);
     let calendar = [];
     while(calendar.length < 42) {
@@ -126,3 +91,5 @@ export default class BrDate {
     return this.calendar;
   }
 }
+
+export default BrDate;
