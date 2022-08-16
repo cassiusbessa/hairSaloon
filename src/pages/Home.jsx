@@ -9,11 +9,11 @@ import Calender from '../components/Calender';
 function Home() {
   return (
     <div>
-      {/* <Header />
+      <Header />
       <NamePage />
       <IntroPage />
       <Carrousel />
-      <Footer /> */}
+      <Footer />
       <Calender />
     </div>
   );

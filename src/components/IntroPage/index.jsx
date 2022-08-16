@@ -2,32 +2,15 @@ import { useState, useEffect } from 'react';
 import './style.scss'
 import Form from 'react-bootstrap/Form';
 import { genericRequest } from '../../api/client-api';
+import { BsCalendar3 } from 'react-icons/bs';
+import { Button, InputGroup } from 'react-bootstrap';
 
 import MyVerticallyCenteredModal from '../VerticalCenterModal';
-
-// const formObj = {
-//   logradouro: {
-//     bairro: 'Cascadura',
-//     rua:'Nobra da Conceição',
-//     cidade: 'Rio de Janeiro',
-//     cep: '88963-71',
-//     complemento: 'Número 72, próximo a quadra de futebol'
-//     },
-//   cliente: {
-//     nome: 'Anderson',
-//     telefone:'(21)666666666'
-//   },
-//   atendimento: {
-//     serviçoId:'cf2775de-098a-11ed-b204-cfa63ad6c76d',
-//     preço: 0,
-//     data: '2022-09-27 12:30:00'
-//   } 
-// }
 
 function IntroPage() {
   const [modalShow, setModalShow] = useState(false);
   const [servicos, setServicos] = useState([]);
-  const [disable, setDisable] = useState()
+  const [disable, setDisable] = useState();
   const [form, setForm] = useState({
     bairro: '',
     rua:'',
@@ -77,20 +60,20 @@ function IntroPage() {
   }
 
   return (
-    <div id ='introPage'>
-      <button className='default-page-button' variant="primary" onClick={() => setModalShow(true)}>
+    <div id ="intro-page">
+      <button className="default-page-button" variant="primary" onClick={() => setModalShow(true)}>
         Agende o seu horário
       </button>
 
       <MyVerticallyCenteredModal
         show={modalShow}
         onHide={() => setModalShow(false)}
-        title='Agendamento'
+        title="Agendamento"
         additionalcustonbutton= {
           <button
             variant="primary"
             type="submit"
-            className='default-page-button'
+            className="default-page-button"
             onClick={handleSubmit}
             disabled={disable}>
             Agendar
@@ -103,15 +86,25 @@ function IntroPage() {
             <Form.Select
               aria-label="Default select example"
               onChange={handleForm}
-              name='serviçoId'
+              name="serviçoId"
             >
               <option value="">Escolha um serviço</option>
               {servicos?.map((e) => (
                 <option id={e.id} key={e.id} value={e.id}>
-                  {`${e.serviço}- Tempo médio de ${e.duraçãoMédia}`}
+                  {`${e.serviço} - Tempo médio de ${e.duraçãoMédia}`}
                 </option>
               ))}
             </Form.Select>
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Escolha um horário:</Form.Label>
+            <InputGroup>
+              <BsCalendar3 style={{ fontSize: "3rem" }} className="form-calendar-icon mb-2" />
+              <div>
+                <div>Dia:</div>
+                <div>Horário:</div>
+              </div>
+            </InputGroup>
           </Form.Group>
           {generateForm()}
         </Form>

@@ -1,6 +1,6 @@
 $bgImg: url('../../images/sulaTopHair/ruivaHair.jpg');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital@1&display=swap');
-#introPage {
+#intro-page {
   align-items: center;
   background-image: url('../../images/sulaTopHair/ruivaHair.jpg');
   background-position: left center;
@@ -10,6 +10,11 @@ $bgImg: url('../../images/sulaTopHair/ruivaHair.jpg');
   height: 342px;
   justify-content: center;
   overflow: hidden;
+}
+
+.form-calendar-icon {
+  color: #C5545E;
+  margin-right: 30px;
 }
 
 @media screen and (min-width: 770px) {
