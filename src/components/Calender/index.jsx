@@ -35,21 +35,30 @@ export default function Calender () {
     setCalendarDays(newCalendar);
   }
 
+  function shadeOfGray(date, currentMonth) {
+    const { weekDay, month } = date;
+    if (weekDay === 0) return 'text-ligth-gray';
+    if (weekDay === 0 || month !== currentMonth)
+      return 'text-gray';
+    else return 'text-black';
+  }
+
   function getMonthName() {
     const dayObj = (calendarDays.length !== 0) && calendarDays.find(({ day }) => day === 1);
     setMonthName(`${months[dayObj.month]} ${dayObj.fullYear}`);
   }
 
-
   function calendar() {
-    return calendarDays.map(({ day, month }, i, arr) => {
+    return calendarDays.map(({ weekDay, day, month }, i, arr) => {
+      const currDate = new Date();
       const dayObj = arr.find(({ day }) => day === 1);
-      const blackColor = dayObj.month === month ? 'text-black' : '';
+      const shadeGray = shadeOfGray({ weekDay, month }, dayObj.month);
+      const currentDay = day === currDate.getDate() && month === currDate.getMonth() && 'currente-date';
 
       return (
         <div
           key={i}
-          className={`cell-calendar cell-calendar-hover ${blackColor}`}
+          className={`cell-calendar cell-calendar-hover ${shadeGray} ${currentDay}`}
         >
           {day}
         </div>
@@ -67,7 +76,7 @@ export default function Calender () {
           onClick={ handlePreviousMonth }
           className="arrow-calendar"
         />
-        <div>{monthName}</div>
+        <div className="text-black">{monthName}</div>
         <AiOutlineRight
           onClick={ handleNextMonth }
           className="arrow-calendar"
@@ -75,7 +84,7 @@ export default function Calender () {
       </div>
       <hr style={{ margin: '2px 5px' }}/>
       <div className="field-calendar">
-        {weekDayLetters.map((w, i) => <div key={i} className="cell-calendar text-black">{w}</div>)}
+        {weekDayLetters.map((w, i) => <div key={i} className="cell-calendar text-gray">{w}</div>)}
         {calendarDays && calendar()}
       </div>
     </div>
