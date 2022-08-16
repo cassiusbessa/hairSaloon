@@ -4,7 +4,6 @@ import IntroPage from '../components/IntroPage';
 import NamePage from '../components/NamePage';
 import Carrousel from '../components/Carroussel';
 import Footer from '../components/Footer';
-import Calender from '../components/Calender';
 
 function Home() {
   return (
@@ -14,7 +13,6 @@ function Home() {
       <IntroPage />
       <Carrousel />
       <Footer />
-      <Calender />
     </div>
   );
 }

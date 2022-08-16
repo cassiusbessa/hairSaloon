@@ -12,9 +12,24 @@ $bgImg: url('../../images/sulaTopHair/ruivaHair.jpg');
   overflow: hidden;
 }
 
+#dropdown-calendar {
+  border: none;
+}
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.show-date{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 8px;
+
+}
+
+
 .form-calendar-icon {
   color: #C5545E;
-  margin-right: 30px;
 }
 
 @media screen and (min-width: 770px) {
