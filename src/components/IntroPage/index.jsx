@@ -3,14 +3,13 @@ import './style.scss'
 import Form from 'react-bootstrap/Form';
 import { genericRequest } from '../../api/client-api';
 import { BsCalendar3 } from 'react-icons/bs';
-import { Button, InputGroup, Dropdown } from 'react-bootstrap';
+import { InputGroup, Dropdown } from 'react-bootstrap';
 import Calendar from '../Calendar'
 
 import MyVerticallyCenteredModal from '../VerticalCenterModal';
 
 function IntroPage() {
   const [modalShow, setModalShow] = useState(false);
-  const [calendarShow, setCalendarShow] = useState(false);
   const [servicos, setServicos] = useState([]);
   const [disable, setDisable] = useState();
   const [form, setForm] = useState({
@@ -122,8 +121,4 @@ function IntroPage() {
   );
 }
 
-
-{/* <MyVerticallyCenteredModal show={calendarShow} onHide={() => setCalendarShow(false)}>
-<Calendar  />
-</MyVerticallyCenteredModal> */}
 export default IntroPage;
