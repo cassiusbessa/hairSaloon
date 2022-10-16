@@ -8,9 +8,10 @@ import { AiOutlineRight, AiOutlineLeft } from 'react-icons/ai';
 const brCalendar = new BrDate(months, weekDays);
 const weekDayLetters = ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'];
 
-export default function Calender () {
+export default function Calender (props) {
   const [calendarDays, setCalendarDays] = useState([]);
   const [monthName, setMonthName] = useState('Teste');
+  const setDate = props.getDateFromCalendar;
 
   useEffect(() => {
     setCalendarDays(brCalendar.calendar);
@@ -48,8 +49,8 @@ export default function Calender () {
     setMonthName(`${months[dayObj.month]} ${dayObj.fullYear}`);
   }
 
-  function calendar() {
-    return calendarDays.map(({ weekDay, day, month }, i, arr) => {
+  function cellMonthDay() {
+    return calendarDays.map(({ weekDay, day, month, fullYear }, i, arr) => {
       const currDate = new Date();
       const dayObj = arr.find(({ day }) => day === 1);
       const shadeGray = shadeOfGray({ weekDay, month }, dayObj.month);
@@ -59,6 +60,10 @@ export default function Calender () {
         <div
           key={i}
           className={`cell-calendar cell-calendar-hover ${shadeGray} ${currentDay}`}
+          onClick={() => {
+            const date = new Date(fullYear, month, day)
+            setDate(date.toLocaleDateString('pt'))
+          }}
         >
           {day}
         </div>
@@ -85,7 +90,7 @@ export default function Calender () {
       <hr style={{ margin: '2px 5px' }}/>
       <div className="field-calendar">
         {weekDayLetters.map((w, i) => <div key={i} className="cell-calendar text-gray">{w}</div>)}
-        {calendarDays && calendar()}
+        {calendarDays && cellMonthDay()}
       </div>
     </div>
   )
