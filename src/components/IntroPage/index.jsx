@@ -14,15 +14,15 @@ function IntroPage() {
   const [disable, setDisable] = useState();
   const [form, setForm] = useState({
     bairro: '',
-    rua:'',
+    rua: '',
     cidade: '',
     cep: '',
     complemento: '',
     nome: '',
-    telefone:'',
+    telefone: '',
     serviçoId:'',
     preço: 0,
-    // data: ''
+    data: ''
   });
 
   const isFormValid = () => Object.values(form).some((field) => field === '');
@@ -59,6 +59,10 @@ function IntroPage() {
     e.preventDefault();
     console.log('teste');
   }
+
+  const getDateFromCalendar = (data) => {
+    setForm({ ...form, data })
+  };
 
   return (
     <div id ="intro-page">
@@ -105,11 +109,11 @@ function IntroPage() {
                   <BsCalendar3 style={{ fontSize: "3rem" }} className="form-calendar-icon mb-2" />
                 </Dropdown.Toggle>
                 <Dropdown.Menu className="p-0 border-0">
-                  <Calendar />
+                  <Calendar getDateFromCalendar={getDateFromCalendar}/>
                 </Dropdown.Menu>
               </Dropdown>
               <div className='show-date'>
-                <div>Dia:</div>
+                <div>Dia: {form.data}</div>
                 <div>Horário:</div>
               </div>
             </InputGroup>
