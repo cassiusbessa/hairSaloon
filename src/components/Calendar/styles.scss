@@ -1,4 +1,4 @@
-colors {
+:root {
   --gray-1: rgb(233, 233, 233);
   --gray-2: rgb(192, 192, 192);
   --gray-3: rgb(161, 161, 161);
@@ -9,9 +9,9 @@ colors {
 }
 
 .calendar-container {
-  border: 1px solid var(gray-7);
+  border: 1px solid var(--gray-1);
   border-radius: 8px;
-  box-shadow: 2px 2px 4px var(gray-2);
+  box-shadow: 2px 2px 4px var(--gray-2);
   width: 250px;
   -webkit-touch-callout: none;  /* iPhone OS, Safari */
   -webkit-user-select: none;    /* Chrome, Safari 3 */
@@ -22,9 +22,9 @@ colors {
   
   .top-header-calendar {
     align-items: center;
-    background-color: var(gray-2);
+    background-color: var(--gray-2);
     border-radius: 8px 8px 0 0;
-    color: var(gray-7);
+    color: var(--gray-7);
     display: flex;
     font-size: small;
     justify-content: center;
@@ -33,12 +33,12 @@ colors {
   }
 
   .top-header-calendar:hover {
-    background-color: var(gray-3);
+    background-color: var(--gray-3);
     cursor: pointer;
   }
 
   .top-header-calendar:active {
-    background-color: var(gray-5);
+    background-color: var(--gray-5);
   }
   
   .header-calendar {
@@ -50,7 +50,7 @@ colors {
     .arrow-calendar {
       align-items: center;
       border-radius: 50%;
-      color: var(gray-4);
+      color: var(--gray-4);
       display: flex;
       justify-content: center;
       transition: background-color 0.3s;
@@ -58,7 +58,7 @@ colors {
 
     .arrow-calendar:hover {
       cursor: pointer;
-      color: var(gray-7);
+      color: var(--gray-7);
     }
   }
 
@@ -84,11 +84,11 @@ colors {
     }
 
     .text-gray {
-      color: var(gray-6);
+      color: var(--gray-6);
     }
 
     .text-ligth-gray {
-      color: var(gray-6);
+      color: var(--gray-6);
       text-decoration: line-through;
     }
 
@@ -97,7 +97,7 @@ colors {
     }
 
     .cell-calendar-hover:hover {
-      background-color: var(gray-1);
+      background-color: var(--gray-1);
       cursor: pointer;
     }
   }
