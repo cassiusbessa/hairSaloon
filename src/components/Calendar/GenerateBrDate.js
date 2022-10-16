@@ -11,16 +11,15 @@ class BrDate {
 
   // HELPERS ===============================================>
   helperVariables(date) { // Recebe uma data e retorna um objeto com as informações separadas
-    const ndt = date;
     return {
-      weekDay: ndt.getDay(),
-      day: ndt.getDate(),
-      month: ndt.getMonth(),
-      fullYear: ndt.getFullYear(),
-      hours: ndt.getHours(),
-      minutes: ndt.getMinutes(),
-      seconds: ndt.getSeconds(),
-      fullDate: ndt,
+      weekDay: date.getDay(),
+      day: date.getDate(),
+      month: date.getMonth(),
+      fullYear: date.getFullYear(),
+      hours: date.getHours(),
+      minutes: date.getMinutes(),
+      seconds: date.getSeconds(),
+      fullDate: date,
     }
   }
 
